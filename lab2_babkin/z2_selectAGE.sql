@@ -1,0 +1,1 @@
+SELECT * FROM public."Buyer" WHERE "Age" > 26  
