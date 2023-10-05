@@ -4,3 +4,4 @@ INNER JOIN "buyer"
 ON "bill"."buyer_ID" = "buyer"."buyer_ID"
 INNER JOIN "seller"
 ON "seller"."seller_ID" = "bill"."seller_ID"
+WHERE "gender" = 'женский'
