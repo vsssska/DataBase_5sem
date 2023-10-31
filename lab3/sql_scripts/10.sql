@@ -1,6 +1,6 @@
 SELECT
 	buy."second_name",
-	COUNT(b."bill_ID") AS total_bills
+	SUM(b."price")/30 AS "price $"
 FROM
 	bill b
 JOIN
@@ -10,4 +10,4 @@ JOIN
 GROUP BY
 	buy."second_name"
 ORDER BY
-	total_bills DESC;
+	"price $" DESC;
