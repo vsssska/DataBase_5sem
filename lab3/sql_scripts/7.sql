@@ -1,4 +1,9 @@
-SELECT MIN(price) AS "мин. цена",
-MAX(price) AS "макс. цена", AVG(price) "сред. цена"
+SELECT 
+	boat."boat_type",
+	AVG(price) AS "сред. цена"
 FROM bill
-HAVING AVG(price) <= 1600;
+JOIN
+	boat ON bill."boat_ID" = boat."boat_ID"
+GROUP BY
+	boat."boat_type"
+HAVING AVG(price) >= 1300;
